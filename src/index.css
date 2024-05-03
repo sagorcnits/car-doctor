@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    padding: 10px 20px;
+    border: 1px solid #ff3811;
+    background-color: transparent;
+    transition: all 0.5s;
+  }
+
+  .button:hover {
+    background-color: #ff3811;
+    color: white;
+  }
+
+  .nav li:hover {
+    color: #ff3811;
+    transition: all 0.5s;
+  }
+}
