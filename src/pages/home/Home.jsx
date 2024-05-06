@@ -7,6 +7,7 @@ import teamImg1 from "../../assets/images/team/1.jpg";
 import teamImg2 from "../../assets/images/team/2.jpg";
 import teamImg3 from "../../assets/images/team/3.jpg";
 import Banner from "../../components/Banner";
+import Feature from "../../components/Feature";
 import ProductCard from "../../components/ProductCard";
 import Section_Intro from "../../components/Section_Intro";
 import ServiceCard from "../../components/ServiceCard";
@@ -99,6 +100,17 @@ const Home = () => {
           <TeamCard teamImg={teamImg3}></TeamCard>
           <TeamCard teamImg={teamImg2}></TeamCard>
           <TeamCard teamImg={teamImg1}></TeamCard>
+        </div>
+      </section>
+      <section className="mt-10">
+        <Section_Intro
+          headerTitle={{
+            small: "Core Features",
+            title: "Why Choose Us",
+          }}
+        ></Section_Intro>
+        <div>
+          <Feature></Feature>
         </div>
       </section>
     </div>
