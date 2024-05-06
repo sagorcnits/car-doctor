@@ -21,4 +21,8 @@
     color: #ff3811;
     transition: all 0.5s;
   }
+
+  .productCart:hover .productIcon {
+    display: flex;
+  }
 }

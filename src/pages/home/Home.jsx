@@ -1,13 +1,24 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import aboutImg2 from "../../assets/images/about_us/parts.jpg";
 import aboutImg from "../../assets/images/about_us/person.jpg";
+import teamImg1 from "../../assets/images/team/1.jpg";
+import teamImg2 from "../../assets/images/team/2.jpg";
+import teamImg3 from "../../assets/images/team/3.jpg";
 import Banner from "../../components/Banner";
+import ProductCard from "../../components/ProductCard";
+import Section_Intro from "../../components/Section_Intro";
 import ServiceCard from "../../components/ServiceCard";
 import ServiceContact from "../../components/ServiceContact";
+import TeamCard from "../../components/TeamCard";
 const Home = () => {
   const serviceData = useLoaderData();
-
-  // console.log(serviceData)
+  const [product, setProduct] = useState([]);
+  // axios data fetch
+  useEffect(() => {
+    axios.get("./public/product.json").then((res) => setProduct(res.data));
+  }, []);
   return (
     <div>
       <Banner></Banner>
@@ -44,16 +55,9 @@ const Home = () => {
         </div>
       </div>
       <section className="mt-10">
-        <div className="text-center font-Inter font-bold space-y-1">
-          <p className=" text-[#FF3811]">Service</p>
-          <h1 className="text-[40px]">Our Service Area</h1>
-          <p className=" text-paragraph-text font-normal">
-            the majority have suffered alteration in some form, by injected{" "}
-            <br />
-            humour, or randomised words which don't look even slightly
-            believable.
-          </p>
-        </div>
+        <Section_Intro
+          headerTitle={{ small: "Service", title: "Our Service Area" }}
+        ></Section_Intro>
         <div className="mt-10 grid md:grid-cols-3 gap-10">
           {serviceData.map((service, id) => (
             <ServiceCard key={id} service={service}></ServiceCard>
@@ -68,7 +72,35 @@ const Home = () => {
           <ServiceContact icon={"location"}></ServiceContact>
         </div>
       </section>
-      <section className="mt-10"></section>
+      <section className="mt-10">
+        <Section_Intro
+          headerTitle={{
+            small: "Popular Products",
+            title: "Browse Our Products",
+          }}
+        ></Section_Intro>
+        <div className="gap-10  grid md:grid-cols-2 lg:grid-cols-3 mt-20">
+          {product.map((product, id) => (
+            <ProductCard key={id} product={product}></ProductCard>
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <button className="button">More Product</button>
+        </div>
+      </section>
+      <section className="mt-10">
+        <Section_Intro
+          headerTitle={{
+            small: "Team",
+            title: "Meet Our Team",
+          }}
+        ></Section_Intro>
+        <div className="gap-10  grid md:grid-cols-2 lg:grid-cols-3 mt-20">
+          <TeamCard teamImg={teamImg3}></TeamCard>
+          <TeamCard teamImg={teamImg2}></TeamCard>
+          <TeamCard teamImg={teamImg1}></TeamCard>
+        </div>
+      </section>
     </div>
   );
 };
