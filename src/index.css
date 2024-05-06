@@ -8,6 +8,8 @@
     border: 1px solid #ff3811;
     background-color: transparent;
     transition: all 0.5s;
+    font-weight: bold;
+    border-radius: 5px;
   }
 
   .button:hover {

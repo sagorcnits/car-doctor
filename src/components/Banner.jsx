@@ -13,7 +13,7 @@ const Banner = () => {
         className="carousel-item relative w-full h-full bg-no-repeat bg-cover bg-blend-multiply bg-[#8ba0b1]"
       >
         <div className="md:w-[550px] flex flex-col gap-4 absolute top-16 md:top-28 left-8 md:left-40">
-          <h1 className=" md:text-[60px] font-Inter text-white font-bold">
+          <h1 className="text-2xl leading-none md:text-[60px] font-Inter text-white font-bold">
             Affordable Price For Car Servicing
           </h1>
           <p className="text-white">
@@ -40,7 +40,7 @@ const Banner = () => {
         className="carousel-item relative w-full  h-full bg-no-repeat bg-cover bg-blend-multiply bg-[#8ba0b1]"
       >
         <div className="md:w-[550px] flex flex-col gap-4 absolute top-16 md:top-28 left-8 md:left-40">
-          <h1 className=" md:text-[60px] font-Inter text-white font-bold">
+          <h1 className="text-2xl leading-none md:text-[60px] font-Inter text-white font-bold">
             Affordable Price For Car Servicing
           </h1>
           <p className="text-white">
@@ -67,7 +67,7 @@ const Banner = () => {
         className="carousel-item relative w-full  h-full bg-no-repeat bg-cover bg-blend-multiply bg-[#8ba0b1]"
       >
         <div className="md:w-[550px] flex flex-col gap-4 absolute top-16 md:top-28 left-8 md:left-40">
-          <h1 className=" md:text-[60px] font-Inter text-white font-bold">
+          <h1 className="text-2xl leading-none md:text-[60px] font-Inter text-white font-bold">
             Affordable Price For Car Servicing
           </h1>
           <p className="text-white">
@@ -94,7 +94,7 @@ const Banner = () => {
         className="carousel-item relative w-full  h-full bg-no-repeat bg-cover bg-blend-multiply bg-[#8ba0b1]"
       >
         <div className="md:w-[550px] flex flex-col gap-4 absolute top-16 md:top-28 left-8 md:left-40">
-          <h1 className=" md:text-[60px] font-Inter text-white font-bold">
+          <h1 className="text-2xl leading-none md:text-[60px] font-Inter text-white font-bold">
             Affordable Price For Car Servicing
           </h1>
           <p className="text-white">
