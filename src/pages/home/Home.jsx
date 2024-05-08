@@ -9,6 +9,7 @@ import teamImg3 from "../../assets/images/team/3.jpg";
 import Banner from "../../components/Banner";
 import Feature from "../../components/Feature";
 import ProductCard from "../../components/ProductCard";
+import ReviewCard from "../../components/ReviewCard";
 import Section_Intro from "../../components/Section_Intro";
 import ServiceCard from "../../components/ServiceCard";
 import ServiceContact from "../../components/ServiceContact";
@@ -111,6 +112,18 @@ const Home = () => {
         ></Section_Intro>
         <div>
           <Feature></Feature>
+        </div>
+      </section>
+      <section>
+        <Section_Intro
+          headerTitle={{
+            small: "Testimonial",
+            title: "What Customer Says",
+          }}
+        ></Section_Intro>
+        <div className="grid md:grid-cols-2 gap-5 mt-10">
+          <ReviewCard></ReviewCard>
+          <ReviewCard></ReviewCard>
         </div>
       </section>
     </div>
