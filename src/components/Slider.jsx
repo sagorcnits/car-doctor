@@ -64,7 +64,7 @@ const Slider = ({ review }) => {
           </SwiperSlide>{" "}
         </>
       ) : (
-        <>
+     <>
           <SwiperSlide>
             <TeamCard teamImg={teamImg1}></TeamCard>
           </SwiperSlide>
@@ -83,7 +83,7 @@ const Slider = ({ review }) => {
           <SwiperSlide>
             <TeamCard teamImg={teamImg1}></TeamCard>
           </SwiperSlide>
-        </>
+     </>
       )}
     </Swiper>
   );

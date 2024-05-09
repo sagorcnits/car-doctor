@@ -25,4 +25,24 @@
   .productCart:hover .productIcon {
     display: flex;
   }
+
+  .service-banner-btn {
+    padding: 10px 30px;
+    background-color: #ff3811;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    bottom: 0;
+    clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+  }
+
+  .step {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
