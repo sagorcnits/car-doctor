@@ -3,17 +3,13 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import aboutImg2 from "../../assets/images/about_us/parts.jpg";
 import aboutImg from "../../assets/images/about_us/person.jpg";
-import teamImg1 from "../../assets/images/team/1.jpg";
-import teamImg2 from "../../assets/images/team/2.jpg";
-import teamImg3 from "../../assets/images/team/3.jpg";
 import Banner from "../../components/Banner";
 import Feature from "../../components/Feature";
 import ProductCard from "../../components/ProductCard";
-import ReviewCard from "../../components/ReviewCard";
 import Section_Intro from "../../components/Section_Intro";
 import ServiceCard from "../../components/ServiceCard";
 import ServiceContact from "../../components/ServiceContact";
-import TeamCard from "../../components/TeamCard";
+import Slider from "../../components/Slider";
 const Home = () => {
   const serviceData = useLoaderData();
   const [product, setProduct] = useState([]);
@@ -97,10 +93,8 @@ const Home = () => {
             title: "Meet Our Team",
           }}
         ></Section_Intro>
-        <div className="gap-10  grid md:grid-cols-2 lg:grid-cols-3 mt-20">
-          <TeamCard teamImg={teamImg3}></TeamCard>
-          <TeamCard teamImg={teamImg2}></TeamCard>
-          <TeamCard teamImg={teamImg1}></TeamCard>
+        <div className=" mt-20">
+          <Slider review={"team"}></Slider>
         </div>
       </section>
       <section className="mt-10">
@@ -121,9 +115,8 @@ const Home = () => {
             title: "What Customer Says",
           }}
         ></Section_Intro>
-        <div className="grid md:grid-cols-2 gap-5 mt-10">
-          <ReviewCard></ReviewCard>
-          <ReviewCard></ReviewCard>
+        <div className="gap-5 mt-10">
+          <Slider review={"review"}></Slider>
         </div>
       </section>
     </div>
