@@ -2,27 +2,15 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaFileArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import serviceImg from "../../assets/images/services/1.jpg";
-import serviceBannerImg from "../../assets/images/services/checkout.png";
 import logo from "../../assets/logo.svg";
 import EnginCard from "../../components/EnginCard";
 import ServiceList from "../../components/ServiceList";
+import TinyBanner from "../../components/TinyBanner";
 import StepCard from "./StepCard";
 const Services = () => {
   return (
     <>
-      <div
-        style={{ backgroundImage: `url(${serviceBannerImg})` }}
-        className="bg-no-repeat bg-cover bg-blend-multiply bg-[#8ba0b1] h-[300px] rounded-md overflow-hidden relative mt-14"
-      >
-        <div className="w-[90%] mx-auto mt-24">
-          <h1 className="text-white text-[30px] font-bold font-Inter">
-            Service Details
-          </h1>
-        </div>
-        <span className="service-banner-btn font-Inter">
-          <Link to="/">Home</Link>/<Link to="/services">Service Details</Link>
-        </span>
-      </div>
+     <TinyBanner info={{title:"Service Details", buttonTitle:"Service"}}></TinyBanner>
       <div className="grid lg:grid-cols-4 gap-4 mt-20">
         <div className="lg:col-span-3">
           <div
@@ -135,9 +123,11 @@ const Services = () => {
           </div>
           <div className="mt-8">
             <h1 className="text-[34px] font-bold">Price $250.00</h1>
-            <button className="button bg-[#FF3811] text-white w-full mt-6 hover:bg-black duration-500">
-              Proceed Checkout
-            </button>
+            <Link to="/checkout">
+              <button className="button bg-[#FF3811] text-white w-full mt-6 hover:bg-black duration-500">
+                Proceed Checkout
+              </button>
+            </Link>
           </div>
         </div>
       </div>
