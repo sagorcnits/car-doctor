@@ -21,7 +21,7 @@ const Navbar = () => {
           <NavLink to="/about">
             <li>About</li>
           </NavLink>
-          <NavLink to="/services">
+          <NavLink to="/addservice">
             <li>Services</li>
           </NavLink>
           <NavLink to="/blog">
@@ -63,7 +63,7 @@ const Navbar = () => {
             <NavLink to="/about">
               <li className="py-2 hover:bg-black">About</li>
             </NavLink>
-            <NavLink to="/services">
+            <NavLink to="/addservice">
               <li className="py-2 hover:bg-black">Services</li>
             </NavLink>
             <NavLink to="/blog">

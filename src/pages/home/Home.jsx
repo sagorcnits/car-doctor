@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import aboutImg2 from "../../assets/images/about_us/parts.jpg";
 import aboutImg from "../../assets/images/about_us/person.jpg";
 import Banner from "../../components/Banner";
@@ -58,7 +58,7 @@ const Home = () => {
         ></Section_Intro>
         <div className="mt-10 grid md:grid-cols-3 gap-10">
           {serviceData.map((service, id) => (
-            <ServiceCard key={id} service={service}></ServiceCard>
+         <Link to="/services"><ServiceCard key={id} service={service}></ServiceCard></Link>
           ))}
         </div>
         <div className="mt-10 text-center">
