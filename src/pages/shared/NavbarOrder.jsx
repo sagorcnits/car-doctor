@@ -1,45 +1,30 @@
 import { useState } from "react";
-import { CiShoppingCart } from "react-icons/ci";
 import { FaBars } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
-import { IoSearchOutline } from "react-icons/io5";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
-const Navbar = () => {
-  const [navItem, setNavItem] = useState(false);
 
+const NavbarOrder = () => {
+  const [navItem, setNavItem] = useState(false);
   return (
     <div className="flex justify-between items-center font-bold font-Inter  max-w-7xl mx-auto px-4 lg:px-0">
       <div>
         <img className="w-[80px]" src={logo} alt="Logo" />
       </div>
-      <div className="hidden lg:flex justify-between w-[60%]">
+      <div className="hidden lg:flex justify-between">
         <ul className="flex gap-10 text-text-medium  items-center nav">
           <NavLink to="/">
-            <li>Home</li>
+            <li>Order</li>
           </NavLink>
           <NavLink to="/about">
-            <li>About</li>
+            <li>Order Review</li>
           </NavLink>
           <NavLink to="/addservice">
-            <li>Services</li>
+            <li>Manage Inventory</li>
           </NavLink>
           <NavLink to="/blog">
-            <li>Blog</li>
-          </NavLink>
-          <NavLink to="/contact">
-            <li>Contact</li>
+            <li>Login</li>
           </NavLink>
         </ul>
-        <div className="hidden lg:flex items-center gap-4">
-          <Link className="text-2xl">
-            <IoSearchOutline></IoSearchOutline>
-          </Link>
-          <Link className="text-2xl">
-            <CiShoppingCart></CiShoppingCart>
-          </Link>
-          <Link to="/login"><button className="button">Login</button></Link>
-        </div>
       </div>
       <div className="text-2xl lg:hidden" onClick={() => setNavItem(true)}>
         <FaBars className="cursor-pointer"></FaBars>
@@ -58,19 +43,16 @@ const Navbar = () => {
           </div>
           <ul className=" gap-10  items-center nav text-white">
             <NavLink to="/">
-              <li className="py-2 hover:bg-black">Home</li>
+              <li className="py-2 hover:bg-black">Order</li>
             </NavLink>
             <NavLink to="/about">
-              <li className="py-2 hover:bg-black">About</li>
+              <li className="py-2 hover:bg-black">Order Review</li>
             </NavLink>
             <NavLink to="/addservice">
-              <li className="py-2 hover:bg-black">Services</li>
+              <li className="py-2 hover:bg-black">Manage Inventory</li>
             </NavLink>
             <NavLink to="/blog">
-              <li className="py-2 hover:bg-black">Blog</li>
-            </NavLink>
-            <NavLink to="/contact">
-              <li className="py-2 hover:bg-black">Contact</li>
+              <li className="py-2 hover:bg-black">Login</li>
             </NavLink>
           </ul>
         </div>
@@ -79,4 +61,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarOrder;
