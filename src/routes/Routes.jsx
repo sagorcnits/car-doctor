@@ -8,6 +8,7 @@ import Contact from "../pages/contact/Contact";
 import Home from "../pages/home/Home";
 import Login from "../pages/login/Login";
 import NotFound from "../pages/notFound/NotFound";
+import Register from "../pages/register/Register";
 import Services from "../pages/services/Services";
 
 const router = createBrowserRouter([
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
 
       {
         path: "/register",
-        element: <h1>register</h1>,
+        element: <Register></Register>,
       },
 
     ],
