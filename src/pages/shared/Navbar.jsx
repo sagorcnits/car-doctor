@@ -38,7 +38,7 @@ const Navbar = () => {
           <Link className="text-2xl">
             <CiShoppingCart></CiShoppingCart>
           </Link>
-          <Link to="/login"><button className="button">Login</button></Link>
+          <Link to="/dashboard/login"><button className="button">Login</button></Link>
         </div>
       </div>
       <div className="text-2xl lg:hidden" onClick={() => setNavItem(true)}>

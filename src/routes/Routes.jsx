@@ -1,8 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
+import Order from "../layout/Order";
 import Root from "../layout/Root";
 import About from "../pages/about/About";
 import ServiceAdd from "../pages/addService/ServiceAdd";
 import Blog from "../pages/blog/Blog";
+import CartDetails from "../pages/cartDetails/CartDetails";
 import CheckOut from "../pages/checkOut/CheckOut";
 import Contact from "../pages/contact/Contact";
 import Home from "../pages/home/Home";
@@ -53,18 +55,30 @@ const router = createBrowserRouter([
         element: <ServiceAdd></ServiceAdd>,
       },
 
-      {
-        path: "/login",
-        element: <Login></Login>,
-      },
-
-      {
-        path: "/register",
-        element: <Register></Register>,
-      },
 
     ],
   },
+
+  {
+    path:"dashboard",
+    element:<Order></Order>,
+    children:[
+      {
+        path:"/dashboard/login",
+        element:<Login></Login>
+      },
+
+      {
+        path:"/dashboard/register",
+        element:<Register></Register>
+      },
+      
+      {
+        path:"/dashboard/cartdetails",
+        element:<CartDetails></CartDetails>
+      },
+    ]
+  }
 ]);
 
 export default router;

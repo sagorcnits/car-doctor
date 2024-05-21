@@ -55,7 +55,7 @@ const Register = () => {
           </div>
           <p className="text-center py-5">
           Already have an account??{" "}
-            <Link to="/login" className="text-red-500 font-semibold">
+            <Link to="/dashboard/login" className="text-red-500 font-semibold">
               Login
             </Link>
           </p>

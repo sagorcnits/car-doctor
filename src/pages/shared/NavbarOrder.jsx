@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import { GiSelfLove } from "react-icons/gi";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { IoIosPersonAdd } from "react-icons/io";
+import { IoSearch } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
-
 const NavbarOrder = () => {
   const [navItem, setNavItem] = useState(false);
+  const user = false;
   return (
     <div className="flex justify-between items-center font-bold font-Inter  max-w-7xl mx-auto px-4 lg:px-0">
       <div>
@@ -15,15 +19,24 @@ const NavbarOrder = () => {
           <NavLink to="/">
             <li>Order</li>
           </NavLink>
-          <NavLink to="/about">
+          <NavLink to="/dashboard/cartdetails">
             <li>Order Review</li>
           </NavLink>
-          <NavLink to="/addservice">
+          <NavLink to="/dashboard/inventory">
             <li>Manage Inventory</li>
           </NavLink>
-          <NavLink to="/blog">
-            <li>Login</li>
-          </NavLink>
+          {user ? (
+            <NavLink to="/dashboard/login">
+              <li>Login</li>
+            </NavLink>
+          ) : (
+            <div className="flex gap-4 items-center *:cursor-pointer text-[20px]">
+              <IoIosPersonAdd></IoIosPersonAdd>
+              <IoSearch></IoSearch>
+              <GiSelfLove></GiSelfLove>
+              <HiOutlineShoppingBag></HiOutlineShoppingBag>
+            </div>
+          )}
         </ul>
       </div>
       <div className="text-2xl lg:hidden" onClick={() => setNavItem(true)}>

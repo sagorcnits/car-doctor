@@ -41,7 +41,7 @@ const Login = () => {
                 <FcGoogle></FcGoogle>
              </div>
           </div>
-          <p className="text-center py-5">Have an account? <Link to='/register' className="text-red-500 font-semibold">Register</Link></p>
+          <p className="text-center py-5">Have an account? <Link to='/dashboard/register' className="text-red-500 font-semibold">Register</Link></p>
         </form>
       </div>
     </div>

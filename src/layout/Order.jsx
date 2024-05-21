@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../pages/shared/Footer";
-import Navbar from "../pages/shared/Navbar";
+import NavbarOrder from "../pages/shared/NavbarOrder";
 
-const Root = () => {
+const Order = () => {
   return (
     <>
       <div className="border-b py-4">
-        <Navbar></Navbar>
+        <NavbarOrder></NavbarOrder>
       </div>
       <div className="max-w-7xl mx-auto px-2 md:px-0">
         <Outlet></Outlet>
@@ -16,4 +16,4 @@ const Root = () => {
   );
 };
 
-export default Root;
+export default Order;
