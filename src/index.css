@@ -57,4 +57,15 @@
   .input-shadow:focus {
     outline: 1px solid #ff3811;
   }
+
+  .aprButton {
+    padding: 10px 20px;
+    border: 1px solid #29b170;
+    background-color: transparent;
+    transition: all 0.5s;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #29b170;
+  }
 }

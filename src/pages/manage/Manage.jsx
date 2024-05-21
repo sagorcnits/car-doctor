@@ -1,18 +1,18 @@
-import { IoArrowUndoSharp } from "react-icons/io5";
-import { MdDelete } from "react-icons/md";
+import { IoIosArrowDown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import OrderTinyBanner from "../../components/OrderTinyBanner";
-const CartDetails = () => {
-  const table = [1, 2, 3, 4];
-
+const Manage = () => {
+    const table = [1, 2, 3, 4];
   return (
     <div>
       <OrderTinyBanner
-        info={{ title: "Cart Details", descrip: "Home - Product Details" }}
+        info={{
+          title: "Manage All Orders",
+          descrip: "Home - Manage All Orders",
+        }}
       ></OrderTinyBanner>
-
-      <div className="overflow-x-auto mt-24">
-        <table className="w-[800px] md:w-full ">
+       <div className="overflow-x-auto mt-24">
+        <table className="w-[900px] md:w-full ">
           <tbody>
             {table.map((item, id) => {
               return (
@@ -39,13 +39,13 @@ const CartDetails = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="text-[22px] font-Inter font-bold">$25.00</td>
+                  <td className="text-[22px] font-Inter font-bold">info@gmail.com</td>
                   <td className="text-[22px] font-Inter font-bold">
                     22-10-2022
                   </td>
                   <td>
-                    <button className="button  text-white  bg-[#FF3811] hover:bg-black duration-500 border-none">
-                      Pending
+                    <button className="aprButton flex gap-2 items-center text-[20px]">
+                    Approved <IoIosArrowDown></IoIosArrowDown>
                     </button>
                   </td>
                 </tr>
@@ -55,16 +55,8 @@ const CartDetails = () => {
         </table>
       </div>
 
-      <div className="flex justify-between items-center py-10 font-Inter *:text-[20px] *:flex *:gap-2 *:items-center *:cursor-pointer">
-        <span>
-          <IoArrowUndoSharp></IoArrowUndoSharp> Continue Shopping
-        </span>
-        <span>
-          <MdDelete></MdDelete> Clear Shopping Cart
-        </span>
-      </div>
     </div>
   );
 };
 
-export default CartDetails;
+export default Manage;

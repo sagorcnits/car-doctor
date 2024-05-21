@@ -22,7 +22,7 @@ const NavbarOrder = () => {
           <NavLink to="/dashboard/cartdetails">
             <li>Order Review</li>
           </NavLink>
-          <NavLink to="/dashboard/inventory">
+          <NavLink to="/dashboard/manage">
             <li>Manage Inventory</li>
           </NavLink>
           {user ? (
