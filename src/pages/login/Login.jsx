@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
@@ -6,6 +7,9 @@ import loginImg from "../../assets/images/login/login.svg";
 const Login = () => {
   return (
     <div className="flex flex-col md:flex-row items-center gap-10 mt-10 text-[#444]">
+       <Helmet>
+        <title>Car Doctor - Login</title>
+      </Helmet>
       <div className="flex-1">
         <img className="md:w-[60%] mx-auto" src={loginImg} alt="" />
       </div>

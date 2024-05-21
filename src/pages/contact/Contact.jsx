@@ -1,7 +1,13 @@
+import { Helmet } from "react-helmet";
+import TinyBanner from "../../components/TinyBanner";
+
 const Contact = () => {
   return (
     <div>
-      <h1>Contact Pages</h1>
+       <Helmet>
+        <title>Car Doctor - Contact</title>
+      </Helmet>
+        <TinyBanner info={{title:"Contact", buttonTitle:"Contact"}}></TinyBanner>
     </div>
   );
 };

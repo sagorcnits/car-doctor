@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 import aboutImg2 from "../../assets/images/about_us/parts.jpg";
 import aboutImg from "../../assets/images/about_us/person.jpg";
@@ -19,6 +20,9 @@ const Home = () => {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Car Doctor - Home</title>
+      </Helmet>
       <Banner></Banner>
       <div className="flex flex-col md:flex-row gap-10 mt-16 pb-10">
         <div className="flex-1 relative md:h-[450px]">

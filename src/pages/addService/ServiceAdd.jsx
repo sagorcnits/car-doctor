@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet";
 import TinyBanner from "../../components/TinyBanner";
 
 const ServiceAdd = () => {
   return (
     <div>
+       <Helmet>
+        <title>Car Doctor - Add Service</title>
+      </Helmet>
       <TinyBanner
         info={{ title: "Add New Service", buttonTitle: "Service" }}
       ></TinyBanner>

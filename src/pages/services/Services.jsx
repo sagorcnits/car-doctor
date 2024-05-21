@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { FaArrowRight } from "react-icons/fa";
 import { FaFileArrowDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -10,6 +11,9 @@ import StepCard from "./StepCard";
 const Services = () => {
   return (
     <>
+     <Helmet>
+        <title>Car Doctor - service</title>
+      </Helmet>
      <TinyBanner info={{title:"Service Details", buttonTitle:"Service"}}></TinyBanner>
       <div className="grid lg:grid-cols-4 gap-4 mt-20">
         <div className="lg:col-span-3">

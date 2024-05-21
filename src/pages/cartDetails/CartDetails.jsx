@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { IoArrowUndoSharp } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
@@ -7,6 +8,9 @@ const CartDetails = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Car Doctor - Cart Details</title>
+      </Helmet>
       <OrderTinyBanner
         info={{ title: "Cart Details", descrip: "Home - Product Details" }}
       ></OrderTinyBanner>

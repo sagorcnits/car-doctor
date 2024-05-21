@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet";
 import TinyBanner from "../../components/TinyBanner";
 
 const CheckOut = () => {
   return (
     <div>
+       <Helmet>
+        <title>Car Doctor - Checkout</title>
+      </Helmet>
       <TinyBanner info={{title:"checkout", buttonTitle:"Checkout"}}></TinyBanner>
       <div className="bg-[#F3F3F3] py-8 px-2 flex justify-center items-center mt-16 rounded-md">
           <form className="md:w-9/12 mx-auto font-Inter ">

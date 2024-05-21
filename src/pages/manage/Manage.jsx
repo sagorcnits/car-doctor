@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import OrderTinyBanner from "../../components/OrderTinyBanner";
@@ -5,6 +6,9 @@ const Manage = () => {
     const table = [1, 2, 3, 4];
   return (
     <div>
+       <Helmet>
+        <title>Car Doctor - Manage</title>
+      </Helmet>
       <OrderTinyBanner
         info={{
           title: "Manage All Orders",

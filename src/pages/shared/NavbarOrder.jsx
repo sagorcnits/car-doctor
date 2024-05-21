@@ -6,6 +6,7 @@ import { IoIosPersonAdd } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+
 const NavbarOrder = () => {
   const [navItem, setNavItem] = useState(false);
   const user = false;
@@ -16,7 +17,7 @@ const NavbarOrder = () => {
       </div>
       <div className="hidden lg:flex justify-between">
         <ul className="flex gap-10 text-text-medium  items-center nav">
-          <NavLink to="/">
+          <NavLink to="/services">
             <li>Order</li>
           </NavLink>
           <NavLink to="/dashboard/cartdetails">
